@@ -1,0 +1,427 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/************** Actual css classes starts **************/
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(35, 143, 249, 0.4962359943977591) 100%, rgba(35, 143, 249, 0.4962359943977591) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+}
+
+
+/************** navbar css starts **************/
+
+.navbar-light .navbar-brand h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.navbar-light .navbar-toggler {
+    margin-right: 20px;
+}
+
+.custom-toggler.navbar-toggler {
+    border: 1px solid white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: blue;
+    cursor: pointer;
+}
+
+
+/************** navbar css ends **************/
+
+
+/************** Wave animation css starts **************/
+
+.header .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url(../images/wave.png);
+    background-size: 1000px 120px;
+}
+
+.header .wave.wave1 {
+    animation: animate 20s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.header .wave.wave2 {
+    animation: animate2 5s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.header .wave.wave3 {
+    animation: animate 20s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+.header .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+
+/************** Wave animation css ends **************/
+
+
+/*************** Sticky Social Bar start *************/
+
+.icon-bar {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar li {
+    height: 30px;
+    position: relative;
+    left: 50px;
+    text-align: center;
+}
+
+.icon-bar li a {
+    color: rgb(86, 86, 160);
+}
+
+.icon-bar ul {
+    list-style-type: none;
+}
+
+
+/*************** Sticky Social Bar ends *************/
+
+
+/************** center content css starts **************/
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 100vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content {
+    position: relative;
+    left: 100px;
+    word-spacing: 2px;
+}
+
+.main_content h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: 300;
+    line-height: 90%;
+}
+
+.main_btn {
+    background-color: white;
+    border: none;
+    width: 210px;
+    position: relative;
+    bottom: 9px;
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+.main_content h2 span {
+    color: #341f4c;
+    font-weight: bold;
+}
+
+.main-img-container {
+    text-align: center;
+}
+
+#main_img {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    right: 30px;
+}
+
+
+/************** center content css ends **************/
+
+
+/************** About css starts **************/
+
+.service-offers {
+    height: 100vh;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.headings {
+    margin-bottom: 150px;
+}
+
+.headings h1 {
+    font-size: 3rem;
+}
+
+.vertical-line {
+    border-left: 2px solid gray;
+    height: 250px;
+    width: 5px;
+    position: absolute;
+    left: 50%;
+}
+
+.About-text {
+    font-size: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: relative;
+    bottom: 70px;
+    text-align: justify;
+    line-height: 130%;
+}
+
+.About-info {
+    padding-left: 80px;
+    padding-right: 80px;
+    position: relative;
+    bottom: 70px;
+}
+
+.margin-set {
+    margin-left: 30px;
+}
+
+.About-info blockquote {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 70%;
+    line-height: 1.1;
+}
+
+blockquote::before {
+    content: '\201c';
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 0.5;
+    font-family: 'EB Garamond', serif;
+}
+
+.About-info h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.About-info h6 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.5;
+}
+
+.service-style {
+    padding-bottom: 40px;
+}
+
+.service-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icons img {
+    height: 150px;
+    width: 150px;
+    margin-right: 60px;
+    position: relative;
+    bottom: 20px;
+}
+
+
+/************** About css ends **************/
+
+
+/************** Actual css classes ends **************/
+
+
+/************** media quary starts **************/
+
+@media screen and (max-width: 1200px) {
+    #main_img {
+        margin: 0;
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    #main_img {
+        position: relative;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main_container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+    .main_content {
+        text-align: center;
+        margin: 0;
+        position: relative;
+        left: 0;
+        top: 160px;
+    }
+    #main_img {
+        margin: 0;
+        height: 450px;
+        width: 450px;
+        position: relative;
+        top: 40px;
+        right: 0;
+    }
+    .main_content h2 {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    .main_content {
+        font-size: 25px;
+    }
+    .main_btn {
+        width: 245px;
+    }
+    .main_btn a {
+        font-size: 30px;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .About-text {
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 520px) {
+    #main_img {
+        height: 350px;
+        width: 350px;
+    }
+    .main_content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+    .main_content {
+        font-size: 22px;
+    }
+    .main_btn {
+        width: 200px;
+    }
+    .main_btn a {
+        font-size: 25px;
+    }
+}
+
+
+/************** media quary ends **************/

@@ -1,0 +1,141 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: BabyBlue;
+  src: url(../fonts/BabyBlue.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.navbar-nav {
+  margin-right: 100px;
+}
+
+.galarry_section {
+  position: relative;
+  top: 160px;
+}
+
+#search-container {
+  margin: 1em 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#buttons {
+  margin-top: 40px;
+}
+#search-container input {
+  background-color: transparent;
+  width: 25%;
+  border: 1px solid #b8bfc6;
+  border-radius: 5px;
+  padding: 10px 0.3em;
+}
+#search-container input:focus {
+  border-bottom-color: #6759ff;
+}
+#search-container button {
+  padding: 0px 10px 0px 10px;
+  background-color:#6ab04c;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: none!important;
+}
+#search-container button:hover {
+  color: #fff;
+  background-color: #434343!important;
+}
+#search-container button:focus {
+  color: #fff;
+  background-color: #434343!important;
+}
+.button-value {
+  border: 2px solid #ced4da;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+.active {
+  background-color: #6ab04c;
+  color: #ffffff;
+}
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 5em;
+  padding: 2em 0;
+}
+.card {
+  background-color: #ffffff;
+  max-width: 20em;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+.image-container {
+  text-align: center;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+.container {
+  padding-top: 1em;
+  color: #110f29;
+}
+.container h5 {
+  font-weight: 500;
+}
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 5em;
+    padding: 2em 0;
+  }
+  #search-container input {
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 10em;
+  }
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #products {
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-value {
+    margin-top: 10px;
+  }
+}
+
+

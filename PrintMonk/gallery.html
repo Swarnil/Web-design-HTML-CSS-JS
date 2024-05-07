@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintMonk</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gal_style.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar wrapper navbar-expand-lg navbar-light fixed-top" id="header-nav">
+            <a class="navbar-brand" href="#" title="Our official logo">
+                <img class="logo" src="img/logo (3).png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+     <!--******************** Header Part End **********************-->
+    <section class="galarry_section">
+        <div class="container">
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Search product name here.." />
+                <button id="search">
+                    <h5 style="float: left; margin-bottom: 0px;">Search</h5>
+                    <i class="fa fa-search" style="margin-left: 10px; font-size: 15px;"></i>
+                </button>
+            </div>
+            <div id="buttons">
+                <button class="button-value" onclick="filterProduct('all')">All</button>
+                <button class="button-value" onclick="filterProduct('Topwear')">
+              Topwear
+            </button>
+                <button class="button-value" onclick="filterProduct('Bottomwear')">
+              Bottomwear
+            </button>
+                <button class="button-value" onclick="filterProduct('Jacket')">
+              Jacket
+            </button>
+                <button class="button-value" onclick="filterProduct('Watch')">
+              Watch
+            </button>
+            </div>
+                <class id="products">
+            </div>
+        </div>
+    </section>
+
+        <!--******************* Contact us starts *****************-->
+        <section class="contact_us" style="margin-top: 300px;">
+            <div class="heading">
+                <h1>CONTACT US</h1>
+            </div>
+    
+    
+            <div class="con_adjust container">
+                <div class="row">
+                    <div class="con_adjust_1 col-lg-6 col-md-12 col-12">
+                        <p style="margin-bottom: 30px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.4754415339175!2d88.43361041443143!3d26.729200074402165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441201290b283%3A0xc9515bbe1e729117!2sThe%20Print%20Monk!5e0!3m2!1sen!2sin!4v1642236097432!5m2!1sen!2sin"
+                                width="400" height="400" allowfullscreen="" loading="lazy"></iframe></p>
+                    </div>
+                    <div class="con_adjust_2 col-lg-6 col-md-12 col-12">
+                        <div class="input-part">
+                            <form action="https://formsubmit.co/swarnil.bhowmick.assassin@gmail.com" method="POST" enctype="multipart/form-data">
+                                <input name="First Name" type="text" class="name1" placeholder="First Name " required>
+                                <input name="Last Name" type="text" class="name2" placeholder="Last Name. "><br>
+                                <input name="Email" type="Email" class="email" placeholder="Email " required>
+                                <input name="Phone" type="text" class="name2" placeholder="Phone No. "><br>
+                                <input name="Subject" type="text" class="subject" placeholder="Subject of this message "><br>
+                                <textarea name="Message" class="message" placeholder="Message " rows="5 " required></textarea><br>
+                                <input type="file" name="attachment" accept="image/png, image/jpeg">
+                                <button type="submit " class="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--******************* Contact us ends *****************-->
+    
+        <!--******************* Footer starts *****************-->
+    
+        <footer class="footer-section ">
+            <p>© The Print Monk 2021 | Design by Imagine Studio & Developed by Swarnil | All Rights Reserved</p>
+        </footer>
+    
+        <!--******************* Footer ends *****************-->
+    
+    <!-- Script -->
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-3.6.0.min.js "></script>
+    <script src="js/script.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/gal_script.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+</body>
+
+</html>
