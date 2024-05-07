@@ -1,0 +1,833 @@
+/************** Preloader starts **************/
+
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    border: 1em solid rgb(0, 0, 0);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/************** Preloader ends **************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #000000;
+}
+
+.fa {
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 1.0rem;
+    margin: 20px 0 15px 0;
+    font-weight: bolder;
+    line-height: 1.1;
+    word-spacing: 4px;
+    color: rgb(0, 0, 0);
+}
+
+.heading-css {
+    padding: 80px 0;
+}
+
+.info {
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+
+/************** Actual css classes start **************/
+
+.header {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    font-size: 16px;
+    color: white;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+#header-nav {
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    transition: 500ms ease;
+}
+
+#header-nav.scrolled {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    padding: 15px 15px;
+}
+
+.nav-item a {
+    color: white!important;
+    text-shadow: 1px 1px 1px #222;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 4px;
+}
+
+.nav-item a:hover,
+.navbar-nav li.active a {
+    color: black!important;
+    background: white;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: 300ms ease;
+}
+
+.nav-item {
+    text-align: center!important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    border: 1px solid white!important;
+    padding: .25rem .50rem;
+}
+
+.header-section {
+    width: 100%;
+    height: inherit;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.center-div {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)!important;
+    -ms-transform: translate(-50%, -50%)!important;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.company-slogan h1 {
+    font-family: 'Lora', serif;
+    font-size: 57px;
+    margin: 0;
+}
+
+.Moto p {
+    word-spacing: 2.5px;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.header-buttons {
+    margin-top: 15px;
+}
+
+.header-buttons a {
+    border: 1px solid white;
+    border-radius: 100px;
+    margin: 0 15px;
+    padding: 7px 13px;
+    outline: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 1px 1px 1px #222;
+    transition: 300ms ease;
+}
+
+#port-button {
+    padding: 7px 20px;
+}
+
+.header-buttons a:hover {
+    border-color: white;
+    color: black;
+    background: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+}
+
+
+/*************** Sticky Social Bar start *************/
+
+.icon-bar {
+    position: absolute;
+    top: 55%;
+    width: 70px;
+    transition: all 0.3s linear;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+}
+
+.icon-bar li {
+    height: 60px;
+    position: relative;
+}
+
+.icon-bar li a {
+    color: white;
+    display: block;
+    height: 100%;
+    width: 80%;
+    line-height: 60px;
+    transition: all .3s linear;
+}
+
+.icon-bar li a i {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    font-size: 27px;
+}
+
+.icon-bar ul li a span {
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.icon-bar li a:hover {
+    width: 170px;
+}
+
+.icon-bar ul li:hover a span {
+    padding-left: 30%;
+    display: block;
+}
+
+
+/*************** Sticky Social Bar ends *************/
+
+
+/*************** extra header div start *************/
+
+.header-extradiv {
+    width: 100%;
+    height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.header-extradiv h2 {
+    font-size: 20px;
+}
+
+.extradiv {
+    background: #ffffff;
+    border: medium none;
+    padding: 50px!important;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.extradiv .fa {
+    font-size: 3em!important;
+    color: black;
+}
+
+.extradiv:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: 300ms ease;
+    background-color: #f1e8e8;
+}
+
+
+/*************** extra header div End *************/
+
+
+/*************** Service css start *************/
+
+.service-offers {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/wallpaperflare.com_wallpaper2.jpg);
+}
+
+.service-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicediv h2,
+#servicediv p {
+    color: white;
+}
+
+.headings {
+    margin-bottom: 50px;
+}
+
+.headings h1 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.names h1 {
+    font-size: 1.0rem;
+    text-shadow: 1px 1px 1px #222;
+    font-weight: bold;
+}
+
+.progress {
+    height: 0.9rem;
+    background-color: #dee6ef;
+    margin-bottom: 24px!important;
+}
+
+.parallaxlite {
+    background-attachment: fixed!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+}
+
+.progress-bar {
+    font-weight: bolder;
+}
+
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+@keyframes animateBar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/*************** Service css end *************/
+
+
+/******************* Project done starts **********************/
+
+.project-work {
+    margin: 100px 0;
+}
+
+.project-work p {
+    color: black;
+}
+
+.project-work h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+
+/******************* Project done ends **********************/
+
+
+/******************* About us css starts **********************/
+
+.about-us {
+    width: 100%;
+    height: 100vh;
+}
+
+.about-us p {
+    color: white;
+}
+
+.aboutus-edit img {
+    width: 400px;
+    height: 400px;
+    margin-left: 15px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #999999;
+}
+
+.aboutus-edit h3 {
+    padding-bottom: 10px;
+}
+
+.aboutus-edit p {
+    color: white;
+}
+
+.about-us {
+    width: 100%;
+    position: relative;
+}
+
+
+/******************* About us css ends **********************/
+
+
+/******************* Happy clients starts **********************/
+
+.happyclients {
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+}
+
+.happyclients h1 {
+    color: black;
+    text-shadow: none;
+}
+
+.box {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    background: #f1e8e8;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -60px!important;
+}
+
+.carousel-indicators li {
+    background-color: black!important;
+}
+
+.box a {
+    position: relative;
+}
+
+.box a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.box a:after {
+    content: "\f10d";
+    font-family: FontAwesome;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: white;
+    position: absolute;
+    top: 120%;
+    left: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h1 {
+    font-size: 18px;
+    font-size: 800;
+    margin-bottom: 10px;
+}
+
+.box h2 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+/******************* Happy clients ends **********************/
+
+
+/******************** contact us starts ***********************/
+
+.contact-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    height: 100%;
+    padding-bottom: 2%;
+}
+
+.contact-us p {
+    color: white;
+}
+
+.contact-form i.fa {
+    font-size: 30px;
+    padding: 3%;
+    margin: 2%;
+    color: white;
+}
+
+.contact-form i .info {
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.input-part input {
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    background-color: rgba(136, 133, 133, 0.5);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.input-part input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+textarea {
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    background-color: rgba(136, 133, 133, 0.5);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.submit {
+    font-family: 'Prototype', arial;
+    width: 40%;
+    background: none;
+    padding: 4px;
+    outline: none;
+    overflow: auto;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 33px;
+    text-align: center;
+    margin-left: 2%;
+    border: 2px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+}
+
+.submit:hover {
+    border: 1px solid #fff;
+    color: black;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 300ms ease;
+}
+
+
+/******************** contact us ends ***********************/
+
+
+/******************** newsletter starts ***********************/
+
+.form-control {
+    background-color: #f1e8e8;
+    border: none;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.newsletter {
+    width: 100%;
+    height: auto;
+    margin: 80px auto;
+}
+
+.newsletter h1 {
+    color: black;
+    text-shadow: none;
+}
+
+.news-input {
+    border-radius: 100px 0px 0px 100px;
+    min-height: 30px;
+    border: 1px solid #000000;
+}
+
+.input-group-text {
+    font-family: 'Prototype', arial;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: 1px solid #000000;
+    border-radius: 0px 100px 100px 0px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 110px;
+    min-height: 30px;
+}
+
+.input-group-text:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+
+/******************** newsletter ends ***********************/
+
+
+/******************** footer starts ***********************/
+
+.footer-section {
+    width: 100%;
+    height: auto;
+    padding: 70px 0 20px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+    position: relative;
+}
+
+.footer-section p {
+    font-style: italic;
+    color: white;
+}
+
+.footer-section li a {
+    font-family: 'Prototype', arial;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.footer-section li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#totop-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#totop-btn:hover {
+    color: black;
+    background: #fff;
+    text-shadow: none;
+}
+
+.site-link {
+    width: 100%;
+    height: auto;
+}
+
+.site-link a {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.site-link ul a .fa:hover {
+    color: #d4d4d4;
+    transform: translateY(-5px);
+    transition: 300ms ease;
+}
+
+
+/******************** footer ends ***********************/
+
+
+/************** media quary starts **************/
+
+@media screen and (max-width: 1200px) {
+    .aboutus-edit img {
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .company-slogan h1 {
+        font-size: 47px;
+    }
+    .service-offers {
+        height: auto;
+        margin-top: 50px;
+    }
+    .about-us {
+        height: auto;
+        margin-top: 50px;
+    }
+    .happyclients {
+        height: auto;
+        margin-top: 50px;
+    }
+    .footer-div {
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .company-slogan h1 {
+        font-size: 37px;
+    }
+    .prog-edit {
+        left: 40px;
+    }
+    .about-us {
+        height: auto;
+        margin-top: 50px;
+    }
+    .aboutus-edit img {
+        width: 250px;
+        height: 250px;
+    }
+    .footer-div:nth-child(2) {
+        text-align: center!important;
+    }
+    .contact-form {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .company-slogan h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .icon-bar {
+        display: none;
+    }
+    .aboutus-edit img {
+        display: none;
+    }
+    .aboutus-edit h3 {
+        text-align: center;
+    }
+}
+
+
+/************** media quary ends **************/
